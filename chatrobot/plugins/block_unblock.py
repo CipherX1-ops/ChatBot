@@ -44,8 +44,8 @@ async def starky(event):
         await event.reply("Not Even Blacklisted.")
     elif is_he_added(user_id):
         removenibba(user_id)
-        await event.reply("DisBlacklisted This Dumb Person")
+        await event.reply("Unblacklisted This Dumb Person")
         await chatbot.send_message(
-            user_id, "Congo! You Have Been Unblacklisted By My Master."
+            user_id, "Congratulations! You Have Been Unblacklisted By My Master."
         )
         await chatbot.send_message(Config.DUMB_CHAT, f"DisBlacklisted User \nUser ID : {user_id}")
