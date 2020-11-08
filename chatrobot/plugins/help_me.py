@@ -50,23 +50,13 @@ async def sedlyfsir(event):
             add_usersid_in_db(event.sender_id)
             await chatbot.send_message(Config.DUMB_CHAT, f"NEW USER ! \nUser ID : `{event.chat_id}`")
         await chatbot.send_file(event.chat_id, file=Config.CUSTOM_IMG, caption=text_me, buttons = [
-             [custom.Button.inline("I Want My Own Bot 🔥", data="mewant")],
+             [custom.Button.inline("🔥 Join Our Channel 🔥", "https://t.me/FutureTechnologyGuard")],
              [custom.Button.inline("Close 🔐", data="close ")],
               ]
              )
     
 
     
-@chatbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"mewant")))
-async def help(event):
-    if event.query.user_id is not Config.OWNER_ID:
-        await event.edit(
-            "You Can Deploy Your Own ChatBot By Watching Video Down There. \nThank You For Contacting Me.",
-            buttons=[
-                [Button.url("Deploy Tutorial 📺", "t.me/Infotel14")],
-                [Button.url("Need Help ❓", "t.me/SerenaAssistantBot")],
-            ],
-        )
         
 @chatbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
 async def help(event):
