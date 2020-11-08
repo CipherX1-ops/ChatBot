@@ -23,5 +23,5 @@ async def _(event):
       pass
       return
     else:
-      await chatbot.send_message(event.chat_id, "I am Not Made For Groups, I only Stay At Group that you have added in `DUMB_CHAT` Var. So, Exiting Chat Now !")
+      await chatbot.send_message(event.chat_id, "I'm Not Made for Groups, I only Stay at Groups which my Master Allows. So, Exiting Chat Now !")
       await event.client.kick_participant(event.chat_id, okbruh)
